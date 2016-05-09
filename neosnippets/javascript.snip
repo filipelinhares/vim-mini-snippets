@@ -1,0 +1,135 @@
+snippet :f
+options head
+  ${1:#:method_name}: function(${2:#:attribute}) {
+    ${0:TARGET}
+  }
+
+snippet function
+abbr    func
+options word
+  function(${2:#:argument}) {
+    ${0:TARGET}
+  }
+
+snippet f
+abbr f
+options word
+  (${1}) => ${2:{}};
+
+snippet if
+options head
+  if (${1:true}) {
+    ${0:TARGET}
+  }
+
+snippet if:else
+abbr ife
+options head
+  if (${1:#:condition}) {
+    ${2:TARGET}
+  } else {
+    ${3}
+  }
+
+snippet for
+options head
+  for (var ${1:i} = 0; $1 < ${2:#:Things}.length; ++$1) {
+    ${0:TARGET}
+  }
+
+snippet for:in
+options head
+  for (var ${1:i} in ${2:#:Things}) {
+    ${0:TARGET}
+  }
+
+snippet while
+options head
+  while (${1:true}) {
+    ${0:TARGET}
+  }
+
+snippet switch
+options head
+  switch (${1:#:var}) {
+    case ${2:#:val}:
+      ${0:TARGET}
+      break;
+  }
+
+snippet try
+options head
+  try {
+    ${1:TARGET}
+  } catch (${2:e}) {
+    ${3}
+  }
+
+snippet try:finally
+options head
+  try {
+    ${1:TARGET}
+  } catch (${2:e}) {
+    ${3}
+  } finally {
+    ${4}
+  }
+
+
+snippet :
+abbr :,
+options word
+  ${1:#:valueName}: ${0:#:value},
+
+snippet timeout
+options head
+  setTimeout(function() { ${0} }, ${1:10});
+
+snippet debugger
+alias db
+options head
+  debugger;
+
+snippet console
+alias cl
+options head
+  console.log(${0:TARGET});
+
+snippet console-trace
+alias ct
+options head
+  console.trace();
+
+snippet console-error
+alias ce
+options head
+  console.error(${0:TARGET});
+
+snippet console-warn
+alias cw
+options head
+  console.warn(${0:TARGET});
+
+snippet console-info
+alias ci
+options head
+  console.info(${0:TARGET});
+
+snippet iife
+options head
+  (function(${1}) {
+    'use strict';
+    ${0:TARGET}
+  })(${2});
+
+snippet json:s
+options head
+  JSON.stringify(${1:TARGET});
+
+snippet json:p
+options head
+  JSON.parse(${1:TARGET});
+
+snippet import
+alias im
+  import ${1} from '${2}';

@@ -1,0 +1,56 @@
+snippet link
+abbr [link][]
+options word
+    [${1:#:link_id}][]${2}
+
+snippet link:id
+abbr [link][id]
+options word
+    [${1:#:link}][${2:id}]${3}
+
+snippet link:url
+abbr [link](url)
+options word
+    [${1:#:link}](http://${2:#:url})${3}
+
+snippet link:email
+abbr [link](email)
+options word
+    [${1:#:link}](mailto:${2:#:email})${3}
+
+snippet link:title
+abbr [link](url "title")
+options word
+    [${1:#:link}](${2:#:url} "${3:#:title}")${4}
+
+snippet id:url
+abbr [id]: url "title"
+options word
+    [${1:#:id}]: http://${2:#:url} "${3:#:title}"
+
+snippet id:email
+abbr [id]: email "title"
+options word
+    [${1:#:id}]: mailto:${2:#:url} "${3:#:title}"
+
+snippet em
+abbr _emphasis_
+options word
+    _${1}_
+
+snippet b
+abbr **strong**
+options word
+    **${1}**
+
+snippet code
+abbr `code`
+options word
+    \`${1}\`
+
+snippet code:block
+abbr code block
+options head
+    \`\`\`${1:#:language}
+    ${2:#:code }
+    \`\`\`
